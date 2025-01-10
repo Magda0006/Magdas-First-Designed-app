@@ -3,40 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Weather app</title>
   </head>
   <body>
-    <h1>
-      Rome
-      <div class="currentDate">Tusday 7 January</div>
-      <div class="currentDegrees">15°</div>
-    </h1>
-    <form>
-      <input type="search" placeholder="Enter a city.." required />
-      <input type="submit" value="search" />
-    </form>
-    <div class="weatherIcon">🌤</div>
-    <main class="currentDayData">
-      <div class="currentDegrees">15°</div>
-      <div class="currentWind">14 km/h</div>
-      <div class="currentHumidity">74%</div>
-      <div class="currentRainChance"></div>
-    </main>
-    <div class="next5DaysForecast">
-      <ul>
-        <li>Wedenessday ⛅️ 15°</li>
-        <li>Thurday ⛅️ 15°</li>
-        <li>Friday ⛅️ 15°</li>
-        <li>Saturday ⛅️ 15°</li>
-        <li>Sunday ⛅️ 15°</li>
-      </ul>
+    <div class="weatherApp">
+      <header class="headerGrid">
+        <div>
+          <h1>
+            Rome
+            <div class="currentDate">Tusday 7 January</div>
+            <div class="currentDegrees">15°</div>
+          </h1>
+        </div>
+        <div>
+          <form class="searchForm">
+            <input
+              type="search"
+              placeholder="Enter a city.."
+              required
+              class="searchBar"
+            />
+            <input type="submit" value="search" class="searchButton" />
+          </form>
+          <br />
+          <div class="weatherIcon">🌤</div>
+        </div>
+      </header>
+      <main class="currentDayData">
+        <div class="currentDegrees">15°</div>
+        <div class="currentWind">14 km/h</div>
+        <div class="currentHumidity">74%</div>
+        <div class="currentRainChance">70%</div>
+      </main>
+      <div class="next5DaysForecast">
+        <ul>
+          <li>Wed <br />⛅️ 15°</li>
+          <li>Thu <br />⛅️ 15°</li>
+          <li>Fri <br />⛅️ 15°</li>
+          <li>Sat <br />⛅️ 15°</li>
+          <li>Sun <br />⛅️ 15°</li>
+        </ul>
+      </div>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/Magda0006">Magda Tudora</a> is open-sourced
+        on
+        <a href="https://github.com/Magda0006/Vanilla-weather-app">GitHub</a>
+        and is
+        <a href="https://vanillaweatherapp00.netlify.app/">hosted on Netlify</a>
+      </footer>
     </div>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/Magda0006">Magda Tudora</a> is open-sourced on
-      <a href="https://github.com/Magda0006/Vanilla-weather-app">GitHub</a> and
-      is
-      <a href="https://vanillaweatherapp00.netlify.app/">hosted on Netlify</a>
-    </footer>
   </body>
 </html>
