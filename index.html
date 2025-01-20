@@ -17,10 +17,12 @@
     <div class="weatherApp">
       <header class="headerGrid">
         <div>
-          <h1 id="city">
-            Rome
-            <div class="currentDate">Tusday 7 January</div>
-            <div class="currentDegrees">15°</div>
+          <h1>
+            <span id="city">Rome</span>
+            <div class="currentDate" id="current-date">Tusday 7 January</div>
+            <div class="currentDegrees">
+              <span id="current-degrees">5</span>°
+            </div>
           </h1>
         </div>
         <div>
@@ -35,32 +37,32 @@
             <input type="submit" value="search" class="searchButton" />
           </form>
           <br />
-          <div class="weatherIcon">🌤</div>
+          <div class="weatherIcon">
+            <img
+              id="weather-icon"
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+            />
+          </div>
         </div>
       </header>
       <main class="currentDayData">
-        <div class="currentDegrees">
-          TEMPERATURE <span class="currentDegreesValue">15°</span>
+        <div class="currentPercivedTemp">
+          FEELS LIKE
+          <span class="currentPercivedTemp" id="current-percived-temp">16</span
+          >°
         </div>
         <div class="currentWind">
-          WIND <span class="currentWindValue">14 km/h</span>
+          WIND <span class="currentWindValue" id="current-wind">14</span> km/h
         </div>
         <div class="currentHumidity">
-          HUMIDITY <span class="currentHumidityValue">70%</span>
+          HUMIDITY
+          <span class="currentHumidityValue" id="current-humidity">70</span>%
         </div>
-        <div class="currentRainChance">
-          RAIN CHANCE <span class="currentRainChanceValue">60%</span>
+        <div class="currentPressure">
+          PRESSURE
+          <span id="current-pressure">1010</span>
         </div>
       </main>
-      <div class="next5DaysForecast">
-        <ul>
-          <li>Wed <br />⛅️ 15°</li>
-          <li>Thu <br />⛅️ 15°</li>
-          <li>Fri <br />⛅️ 15°</li>
-          <li>Sat <br />⛅️ 15°</li>
-          <li>Sun <br />⛅️ 15°</li>
-        </ul>
-      </div>
       <footer>
         This project was coded by
         <a href="https://github.com/Magda0006">Magda Tudora</a> is open-sourced
