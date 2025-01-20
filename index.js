@@ -6,3 +6,4 @@ function useSubmittedData(event) {
 }
 let searchEngineElemet = document.querySelector("#search-from");
 searchEngineElemet.addEventListener("submit", useSubmittedData);
+console.log(axios);
