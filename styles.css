@@ -3,6 +3,7 @@ body {
   font-family: "Montserrat", "Source Code Pro", serif;
 }
 .weatherApp {
+  max-width: 600px;
   background-color: white;
   border-radius: 20px;
   margin: 50px auto;
@@ -12,6 +13,7 @@ body {
 .headerGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(36, 35, 36, 0.122);
 }
 .headerGrid div {
   text-align: center;
@@ -20,10 +22,10 @@ h1 div {
   font-size: medium;
   color: rgba(36, 35, 36, 0.622);
 }
-.searchForm {
-}
+
 .searchBar {
-  padding: 10px 30px;
+  max-width: fit-content;
+  padding: 10px;
   background-color: rgba(106, 176, 237, 0.176);
   border: none;
   border-radius: 7px;
@@ -34,33 +36,47 @@ h1 div {
   border: none;
   border-radius: 7px;
 }
+.searchButton:hover {
+  cursor: pointer;
+}
 .weatherIcon {
   font-size: 40px;
 }
 .currentDayData {
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 .currentDayData div {
+  color: rgba(36, 35, 36, 0.622);
   text-align: center;
-  margin: 5px;
+  margin: 1px;
   padding: 10px;
   border-radius: 4px;
   background-color: rgba(106, 176, 237, 0.176);
 }
 .next5DaysForecast ul {
-  padding: 0;
+  border-top: 1px solid rgba(36, 35, 36, 0.122);
+  padding-top: 20px;
+  padding-left: 0;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
 .next5DaysForecast ul li {
+  color: rgba(36, 35, 36, 0.622);
   margin: 5px;
   padding: 10px;
   background-color: rgba(106, 176, 237, 0.176);
   text-align: center;
+  border-radius: 4px;
+}
+.next5DaysForecast ul li:hover {
+  transform: scale(110%);
 }
 footer {
+  font-size: 14px;
   text-align: center;
   color: rgba(36, 35, 36, 0.622);
 }
