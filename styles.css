@@ -56,6 +56,9 @@ h1 div {
   border-radius: 4px;
   background-color: rgba(106, 176, 237, 0.176);
 }
+.currentDayData div span {
+  color: rgb(65, 149, 223);
+}
 .next5DaysForecast ul {
   border-top: 1px solid rgba(36, 35, 36, 0.122);
   padding-top: 20px;
