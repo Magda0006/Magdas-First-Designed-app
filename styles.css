@@ -58,8 +58,35 @@ h1 div {
 }
 .currentDayData div span {
   color: rgb(65, 149, 223);
+  font-weight: bold;
+}
+.fiveDayForecast {
+  border-top: 1px solid rgba(36, 35, 36, 0.122);
+  display: flex;
+  justify-content: space-around;
+}
+.forecastDate {
+  text-align: center;
+  color: rgba(36, 35, 36, 0.622);
+  padding-top: 20px;
+  font-size: 16px;
+}
+.forecastDayIcon {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 6px;
+}
+.forecastTemperatures {
+  display: flex;
+  justify-content: center;
+}
+.forecastTemperature {
+  color: rgb(65, 149, 223);
+  margin: 6px;
 }
 footer {
+  padding-top: 15px;
+  border-top: 1px solid rgba(36, 35, 36, 0.122);
   font-size: 14px;
   text-align: center;
   color: rgba(36, 35, 36, 0.622);
