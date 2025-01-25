@@ -30,7 +30,6 @@ function changeIcon(iconUrl) {
 }
 function refreshWeatherData(response) {
   let currentTempElement = document.querySelector("#current-degrees");
-  let dayDescriptionElement = document.querySelector("#day-description");
   let currentPercivedTempElement = document.querySelector(
     "#current-percived-temp"
   );
@@ -44,7 +43,6 @@ function refreshWeatherData(response) {
   let currentHumidity = response.data.temperature.humidity;
   let currentPressure = response.data.temperature.pressure;
   currentTempElement.innerHTML = Math.round(currentTemp);
-  dayDescriptionElement.innerHTML = response.condition.description;
   currentPercivedTempElement.innerHTML = Math.round(currentPercivedTemp);
   currentWindElement.innerHTML = Math.round(currentWind);
   currentHumidityElement.innerHTML = Math.round(currentHumidity);
@@ -52,6 +50,8 @@ function refreshWeatherData(response) {
   let iconUrl = response.data.condition.icon_url;
   changeIcon(iconUrl);
   getForecast(response.data.city);
+  let dayDescriptionElement = document.querySelector("#day-description");
+  dayDescriptionElement.innerHTML = response.data.condition.description;
 }
 function searchCity(city) {
   let apiKey = "2td2983oa81aa7bb308858f488f7ba0c";
