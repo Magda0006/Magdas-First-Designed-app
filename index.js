@@ -70,3 +70,28 @@ let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#five-day-forecast");
+
+  let days = ["Tue", "Wed", "Thu", "Fry", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="fiveDayForecast">
+        <div class="forecastDay">
+          <div class="forecastDate">${day}</div>
+          <div class="forecastDayIcon">🌤</div>
+          <div class="forecastTemperatures">
+            <div class="forecastTemperature">15°</div>
+            <div class="forecastTemperature">20°</div>
+          </div>
+        </div>
+      </div>`;
+  });
+  forecastElement.innerHTML = forecastHtml;
+}
+
+displayForecast();
