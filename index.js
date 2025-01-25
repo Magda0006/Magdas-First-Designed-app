@@ -30,6 +30,7 @@ function changeIcon(iconUrl) {
 }
 function refreshWeatherData(response) {
   let currentTempElement = document.querySelector("#current-degrees");
+  let dayDescriptionElement = document.querySelector("#day-description");
   let currentPercivedTempElement = document.querySelector(
     "#current-percived-temp"
   );
@@ -43,6 +44,7 @@ function refreshWeatherData(response) {
   let currentHumidity = response.data.temperature.humidity;
   let currentPressure = response.data.temperature.pressure;
   currentTempElement.innerHTML = Math.round(currentTemp);
+  dayDescriptionElement.innerHTML = response.condition.description;
   currentPercivedTempElement.innerHTML = Math.round(currentPercivedTemp);
   currentWindElement.innerHTML = Math.round(currentWind);
   currentHumidityElement.innerHTML = Math.round(currentHumidity);
@@ -55,6 +57,7 @@ function searchCity(city) {
   let apiKey = "2td2983oa81aa7bb308858f488f7ba0c";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(refreshWeatherData);
+  console.log(apiUrl);
 }
 function useSubmittedData(event) {
   event.preventDefault();
