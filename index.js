@@ -27,10 +27,8 @@ function formatDate(date) {
 function changeIcon(iconUrl) {
   let iconElement = document.querySelector("#weather-icon");
   iconElement.src = iconUrl;
-  console;
 }
 function refreshWeatherData(response) {
-  console.log(response.data);
   let currentTempElement = document.querySelector("#current-degrees");
   let currentPercivedTempElement = document.querySelector(
     "#current-percived-temp"
@@ -51,6 +49,7 @@ function refreshWeatherData(response) {
   currentPressureElement.innerHTML = Math.round(currentPressure);
   let iconUrl = response.data.condition.icon_url;
   changeIcon(iconUrl);
+  getForecast(response.data.city);
 }
 function searchCity(city) {
   let apiKey = "2td2983oa81aa7bb308858f488f7ba0c";
@@ -71,7 +70,16 @@ let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
 
-function displayForecast() {
+function getForecast(city) {
+  console.log(city);
+  let apiKey = "2td2983oa81aa7bb308858f488f7ba0c";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&unit=metric`;
+  axios(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#five-day-forecast");
 
   let days = ["Tue", "Wed", "Thu", "Fry", "Sat"];

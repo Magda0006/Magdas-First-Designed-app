@@ -45,8 +45,10 @@ h1 div {
 .currentDayData {
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid rgba(36, 35, 36, 0.122);
 }
 .currentDayData div {
   color: rgba(36, 35, 36, 0.622);
@@ -61,14 +63,13 @@ h1 div {
   font-weight: bold;
 }
 .fiveDayForecast {
-  border-top: 1px solid rgba(36, 35, 36, 0.122);
   display: flex;
   justify-content: space-around;
 }
 .forecastDate {
   text-align: center;
   color: rgba(36, 35, 36, 0.622);
-  padding-top: 20px;
+  padding-top: 10px;
   font-size: 16px;
 }
 .forecastDayIcon {
@@ -83,6 +84,7 @@ h1 div {
 .forecastTemperature {
   color: rgb(65, 149, 223);
   margin: 6px;
+  padding-bottom: 10px;
 }
 footer {
   padding-top: 15px;
